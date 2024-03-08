@@ -1,0 +1,129 @@
+body {
+
+    background: #4b6cb7;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #182848, #4b6cb7);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #182848, #4b6cb7);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    height: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+    color: #2196f3;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#finance-logo {
+    color: white;
+    
+}
+
+form {
+    background: #00234d;
+    padding: 40px;
+    box-shadow: 0 0 6px 0 rgba(255, 255, 255, alpha);
+    border-radius: 10px;
+    border: solid #2196f3;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form {
+    width: 100%;
+    margin: auto;
+}
+
+.form .grupo {
+    position: relative;
+    margin: 45px;
+
+}
+
+input {
+    background: none;
+    color: gray;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: solid #2196f3;
+    border-radius: 30px
+}
+
+input:focus {
+    outline: none;
+    color: white;
+}
+
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -25px;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FC5C7D;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #6A82FB, #FC5C7D);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: solid #2196f3;
+    border-radius: 30px;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.4 ease;
+
+}
+
+@media screen and (max-width:500px) {
+    form {
+        width: 80%;
+    }
+
+}
+
+.warnings {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #2196f3;
+    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: oblique;
+}
+
+button:hover {
+    color: white;
+    background: #00B4DB;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0083B0, #00B4DB);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/Design css/ui.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>INTERFACE FINANCE</title>
+</head>
+
+<body>
+  <script src="/Functions Js/function.js"></script>
+
+  <header class="title-app">
+    <h1>FINANCE</h1>
+  </header>
+
+  <div class="profile">
+    <img src="/Icons/perfile.svg" class="img-profile">
+    <a href="#" id="name-profile" class="name-profile">James</a>
+    <p id="greet" class="greet">Good morning!</p>
+  </div>
+
+  <nav class="settings-bar">
+    <button id="toggleMenu" class="btn-menu">
+      <img src="/Icons/settings.svg" class="list__img" />
+    </button>
+    <ul class="list hidden">
+      <li class="list__item">
+        <div class="list__button">
+          <img src="/Icons/user.svg" class="list__img" id="" />
+          <a href="#" class="nav__link" id="perfila">Perfil</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="list__button list__button--click">
+          <img src="/Icons/account.svg" class="list__img" />
+          <a href="#" class="nav__link">Cuenta</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="list__button list__button--click">
+          <img src="/Icons/support.svg" class="list__img" />
+          <a href="#">Reportes</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="list__button list__button--click">
+          <img src="/Icons/info.svg" class="list__img" />
+          <a href="#">Informacion</a>
+        </div>
+      </li>
+
+      <li class="list__item">
+        <div class="list__button list__button--click">
+          <img src="/Icons/log-out.svg" class="list__img" id="log-out" />
+          <a href="#">log-out</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="profile-options-wallet">
+    <ul class="list-nav">
+      <li id="inversion">Inversiones</li>
+      <li id="wallet">Cartera</li>
+      <li id="overview">General</li>
+      <li id="info">Info</li>
+    </ul>
+  </nav>
+
+  </div>
+
+  <div class="calculator">
+    <input type="number" placeholder="Tus ingresos" id="ingresos" />
+    <button type="submit" id="calcular" onclick="calcularImpuestos()">Calcular</button>
+  </div>
+
+  <div class="saved-number">
+    <h2 id="tusahorros">TUS AHORROS</h2>
+    <h2 id="numerito">$0</h2>
+  </div>
+  <div class="waste">
+    <h2 id="tusgastos">Tus gastos:</h2>
+  </div>
+
+<div>
+  <nav class="gastos">
+    <li id="impuestos">Impuestos:  
+      <p id="warningsNumbers" class="warningsNumbers"></p> </li>
+
+    <li id="wifi">
+      <img src="/Icons/wifi.svg" class="wifi-waste">
+      Internet:
+    </li>
+
+    <li id="car">
+      <img src="/Icons/car.svg" class="car-waste">
+      Vehículo:
+    </li>
+
+    <li id="phone">
+      <img src="/Icons/phone.svg" class="phone-waste">
+      Teléfono:
+    </li>
+    
+    <li id="seguro">
+      <img src="/Icons/healt.svg" class="healt-waste">
+      Seguro:
+    </li>
+
+    <li id="pensiones">
+      <img src="/Icons/afp.svg" class="afp-waste" >
+      Fondo de Pensiones:
+    </li>
+
+  </nav>
+</div>
+  
+  <script src="../Functions Js/ui.js"></script>
+</body>
+
+</html>
