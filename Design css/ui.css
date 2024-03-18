@@ -250,12 +250,17 @@ input {
 
 #numerito {
 	font-size: 25px;
-	margin: 70px;
+	margin: 20px;
 }
 
 #tusahorros {
-	font-size: 25px;
-	margin-top: 10px;
+	font-size: 24px;
+	margin: 20px;
+}
+
+.saved-number h2 {
+	margin-top: 20px;
+	padding: 20px;
 }
 
 #tusgastos {
@@ -302,6 +307,16 @@ input {
 
 div h2 {
 	text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+	/* Styles for phones */
+	.saved-number {
+		width: 80%;
+	}
+	#ingresos-input {
+		width: 100%;
+	}
 }
 
 #ingresos-input {
@@ -353,4 +368,133 @@ div h2 {
 }
 .hidden {
 	display: none;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+	/* Styles for tablets */
+	header {
+		display: none; /* Oculta el encabezado en tablets */
+	}
+
+	.combined-navigation {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.list-nav {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.list-nav li {
+		width: auto;
+		margin: 0 10px;
+	}
+
+	.settings-bar {
+		top: 0;
+		right: 0;
+	}
+
+	.calculator {
+		width: 80%;
+		flex-direction: column;
+	}
+
+	.calculator input {
+		width: 100%;
+	}
+
+	.gastos li {
+		width: 100%;
+	}
+
+	#calcular {
+		width: 20%;
+	}
+}
+
+@media only screen and (max-width: 389px) and (max-height: 843px) {
+	/* Styles for phones */
+	header {
+		display: none; /* Oculta el encabezado en teléfonos */
+	}
+
+	.combined-navigation {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.list-nav {
+		flex-direction: column;
+	}
+
+	.list-nav li {
+		width: 100%;
+	}
+
+	.settings-bar {
+		top: 0;
+		right: 0;
+	}
+
+	.calculator {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.calculator input {
+		width: 100%;
+	}
+
+	.gastos li {
+		width: 100%;
+	}
+}
+
+@media only screen and (max-width: 843px) and (orientation: portrait) {
+	/* Styles for phones */
+	header {
+		display: none; /* Oculta el encabezado en teléfonos en orientación vertical */
+	}
+
+	.combined-navigation {
+		height: auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.list-nav {
+		flex-direction: column;
+	}
+
+	.list-nav li {
+		width: 100%;
+	}
+
+	.settings-bar {
+		top: 0;
+		right: 0;
+	}
+
+	.calculator {
+		width: 80%;
+		flex-direction: column;
+	}
+
+	.calculator input {
+		width: 100%;
+	}
+
+	.gastos li {
+		width: 80%;
+	}
+
+	#calcular {
+		width: 40%;
+	}
 }
