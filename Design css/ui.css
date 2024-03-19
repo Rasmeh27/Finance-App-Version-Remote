@@ -371,9 +371,8 @@ div h2 {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
-	/* Styles for tablets */
 	header {
-		display: none; /* Oculta el encabezado en tablets */
+		display: none;
 	}
 
 	.combined-navigation {
@@ -418,9 +417,8 @@ div h2 {
 }
 
 @media only screen and (max-width: 389px) and (max-height: 843px) {
-	/* Styles for phones */
 	header {
-		display: none; /* Oculta el encabezado en teléfonos */
+		display: none;
 	}
 
 	.combined-navigation {
@@ -457,9 +455,8 @@ div h2 {
 }
 
 @media only screen and (max-width: 843px) and (orientation: portrait) {
-	/* Styles for phones */
 	header {
-		display: none; /* Oculta el encabezado en teléfonos en orientación vertical */
+		display: none;
 	}
 
 	.combined-navigation {
