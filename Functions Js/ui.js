@@ -29,7 +29,7 @@ btn.addEventListener("click", function () {
 
 if (logout) {
 	logout.addEventListener("click", function () {
-		window.location.href = "";
+		window.location.href = "/blocks/index.html";
 	});
 }
 
