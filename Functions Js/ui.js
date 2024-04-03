@@ -9,16 +9,23 @@ const resultElement = document.getElementById("numerito");
 //Funciones del nav 
 const invertion = document.getElementById("inversion");
 
+
 if (invertion) {
 	invertion.addEventListener("click", function () {
 		swal.fire({
 			title: "Inversiones",
-			text: "Aqui podras invertir un porcentaje de tus ingresos",
-			icon: "success"
+			text: "Este apartado está destinado a personas con experiencia en el ámbito de las inversiones.",
+			icon: "warning",
+			footer: '<a id="inversionLink" href="https://www.rexi.do">Invierte un porcentaje aquí en Rexi</a>'
+		});
 
-		})
-	})
+		document.getElementById('inversionLink').addEventListener('click', function (event) {
+			event.preventDefault();
+			window.open(this.href, '_blank');
+		});
+	});
 }
+
 
 
 
@@ -81,6 +88,7 @@ function calcularImpuestos() {
 
 	var ingresosDespuesGastos = ingresos - totalGastos;
 
+
 	if (ingresos <= 20000) {
 		warnings.innerHTML = "No se le aplicarán impuestos.";
 		resultElement.innerHTML = "$" + ingresos.toFixed(2);
@@ -97,8 +105,29 @@ function calcularImpuestos() {
 			warnings.innerHTML = "RD$ - " + impuestos.toFixed(2);
 		}
 
+		// //Porcentaje de ahorro aleatorio 
+		// function porcentajeDeAhorroAleatorio(min, max) {
+		// 	return Math.floor(Math.random() * (max - min + 1)) + min;
+
+		// }
+
+		//alerta de ahorro 
+
+		var porcentajeDeAhorro = ((ingresosDespuesGastos) / ingresos * 20);
+		var porcentajDeInversion = ((ingresosDespuesGastos) / ingresos * 50);
+
 		var resultadoDespuesImpuestos = ingresosDespuesGastos - impuestos;
 		resultElement.innerHTML = "$" + resultadoDespuesImpuestos.toFixed(2);
+
+		if ((porcentajeDeAhorro)) {
+			swal.fire({
+				title: "Deberias ahorrar: " + porcentajeDeAhorro.toFixed(2) + "% " + "O podrias invertir este porcentaje " + porcentajDeInversion.toFixed(2) + "%",
+				icon: "info",
+			});
+			return;
+		}
 	}
+
+
 
 }
