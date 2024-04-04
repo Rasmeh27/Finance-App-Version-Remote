@@ -105,12 +105,6 @@ function calcularImpuestos() {
 			warnings.innerHTML = "RD$ - " + impuestos.toFixed(2);
 		}
 
-		// //Porcentaje de ahorro aleatorio 
-		// function porcentajeDeAhorroAleatorio(min, max) {
-		// 	return Math.floor(Math.random() * (max - min + 1)) + min;
-
-		// }
-
 		//alerta de ahorro 
 
 		var porcentajeDeAhorro = ((ingresosDespuesGastos) / ingresos * 20);
@@ -121,7 +115,8 @@ function calcularImpuestos() {
 
 		if ((porcentajeDeAhorro)) {
 			swal.fire({
-				title: "Deberias ahorrar: " + porcentajeDeAhorro.toFixed(2) + "% " + "O podrias invertir este porcentaje " + porcentajDeInversion.toFixed(2) + "%",
+				title: "AHORRA MI REY, QUE NADA MAS TE GUSTA GASTAR Y BEBER ROMO",
+				text: "Deberias ahorrar: " + porcentajeDeAhorro + "% " + "O podrias invertir este porcentaje " + porcentajDeInversion + "%",
 				icon: "info",
 			});
 			return;
