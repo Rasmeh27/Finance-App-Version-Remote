@@ -107,8 +107,8 @@ function calcularImpuestos() {
 
 		//alerta de ahorro 
 
-		var porcentajeDeAhorro = ((ingresosDespuesGastos) / ingresos * 20);
-		var porcentajDeInversion = ((ingresosDespuesGastos) / ingresos * 50);
+		var porcentajeDeAhorro = ((ingresosDespuesGastos) / ingresos * 50);
+		var porcentajDeInversion = ((ingresosDespuesGastos) / ingresos * 20);
 
 		var resultadoDespuesImpuestos = ingresosDespuesGastos - impuestos;
 		resultElement.innerHTML = "$" + resultadoDespuesImpuestos.toFixed(2);
@@ -116,7 +116,7 @@ function calcularImpuestos() {
 		if ((porcentajeDeAhorro)) {
 			swal.fire({
 				title: "AHORRA MI REY, QUE NADA MAS TE GUSTA GASTAR Y BEBER ROMO",
-				text: "Deberias ahorrar: " + porcentajeDeAhorro + "% " + "O podrias invertir este porcentaje " + porcentajDeInversion + "%",
+				text: "Deberias ahorrar: " + porcentajeDeAhorro.toFixed(2) + "% " + "O podrias invertir este porcentaje " + porcentajDeInversion.toFixed(2) + "%",
 				icon: "info",
 			});
 			return;

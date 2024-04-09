@@ -4,7 +4,7 @@ const password = document.getElementById("password");
 const parrafo = document.getElementById("warnings");
 const form = document.getElementById("form");
 const forgotPasswordLink = document.getElementById("forgot-password");
-const registerLink = document.getElementById("register-link");
+const registerLink = document.querySelector("#register-link");
 
 
 form.addEventListener("submit", e => {
@@ -42,12 +42,13 @@ function redirectToAnotherPage() {
 }
 
 forgotPasswordLink.addEventListener("click", function (event) {
-    event.defaultPrevented();
-    //Dirigir al formulario de contraseña
+
 
 })
 
 registerLink.addEventListener("click", function (event) {
-    event.defaultPrevented();
-    //Dirigir al formulario de registro
+    const registerPage = "/blocks/register.html"
+
+    window.location.href = registerPage;
+
 })
