@@ -22,6 +22,11 @@ body {
   text-align: center;
 }
 
+.register-big-letter {
+  text-align: center;
+  color: #2196f3;
+}
+
 .register-form {
   width: 500px;
   background-color: #00234d;
