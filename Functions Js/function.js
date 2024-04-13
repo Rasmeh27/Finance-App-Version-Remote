@@ -42,6 +42,9 @@ function redirectToAnotherPage() {
 }
 
 forgotPasswordLink.addEventListener("click", function (event) {
+    const forgotPasswordLink = "/blocks/changepass.html"
+
+    window.location.href = forgotPasswordLink;
 
 
 })
