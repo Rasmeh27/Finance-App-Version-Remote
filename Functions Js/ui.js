@@ -8,6 +8,21 @@ const resultElement = document.getElementById("numerito");
 
 //Funciones del nav 
 const invertion = document.getElementById("inversion");
+const cartera = document.getElementById('wallet');
+const menu = document.getElementById('overview');
+
+if (cartera) {
+	cartera.addEventListener("click", function () {
+		window.location.href = "/blocks/wallet.html";
+
+	})
+}
+
+if (menu) {
+	menu.addEventListener("click", function () {
+		window.location.href = "/blocks/ui.html"
+	})
+}
 
 
 if (invertion) {
@@ -25,8 +40,6 @@ if (invertion) {
 		});
 	});
 }
-
-
 
 
 btn.addEventListener("click", function () {
@@ -48,7 +61,7 @@ if (info) {
 	info.addEventListener("click", function () {
 		swal.fire({
 			title: "Information",
-			text: "1. Introduce tus ingresos. 2. Introduce tus gastos 3. Presiona el botón de calcular.",
+			text: "1. Introduce tus ingresos. 2. Introduce tus gastos 3. Presiona el botón de calcular. NOTA: Si ganas quincenal divide tus resultados en 2. Tus gastos totales los puedes ver en la cartera.",
 			icon: "info",
 		});
 	});
@@ -67,6 +80,7 @@ function calcularImpuestos() {
 	var gastosEnergiaInput = parseFloat(document.getElementById("input-gastos-energia").value.trim())
 	var gastosAguaInput = parseFloat(document.getElementById("input-gastos-agua").value.trim())
 
+	//calcular gastos
 	var gastosInternet = gastosInternetInput ? gastosInternetInput : 0;
 	var gastosVehiculo = gastosVehiculoInput ? gastosVehiculoInput : 0;
 	var gastosTelefono = gastosTelefonoInput ? gastosTelefonoInput : 0;
@@ -76,7 +90,6 @@ function calcularImpuestos() {
 	var gastosAgua = gastosAguaInput ? gastosAguaInput : 0;
 
 	var totalGastos = gastosInternet + gastosVehiculo + gastosTelefono + gastosSeguro + gastosAfp + gastosEnergia + gastosAgua;
-
 
 	if (isNaN(ingresos) || isNaN(totalGastos) || ingresos === "") {
 		swal.fire({
@@ -110,18 +123,24 @@ function calcularImpuestos() {
 		var porcentajeDeAhorro = ((ingresosDespuesGastos) / ingresos * 50);
 		var porcentajDeInversion = ((ingresosDespuesGastos) / ingresos * 20);
 
+		// Después de calcular el resultado
 		var resultadoDespuesImpuestos = ingresosDespuesGastos - impuestos;
 		resultElement.innerHTML = "$" + resultadoDespuesImpuestos.toFixed(2);
 
+		// Guardar el resultado en el localStorage
+		localStorage.setItem('resultadoImpuestos', resultadoDespuesImpuestos.toFixed(2));
+		localStorage.setItem('totalGastos', totalGastos.toFixed(2));
+
 		if ((porcentajeDeAhorro)) {
 			swal.fire({
-				title: "AHORRA MI REY, QUE NADA MAS TE GUSTA GASTAR Y BEBER ROMO",
+				title: "AHORRA O INVIERTE",
 				text: "Deberias ahorrar: " + porcentajeDeAhorro.toFixed(2) + "% " + "O podrias invertir este porcentaje " + porcentajDeInversion.toFixed(2) + "%",
 				icon: "info",
 			});
 			return;
 		}
 	}
+
 
 
 

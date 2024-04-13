@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Design css/wallet.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/Functions Js/wallet.js"></script>
+    <title>Cartera</title>
+</head>
+
+<body>
+    <header>
+        <h1>Cartera</h1>
+    </header>
+
+    <nav class="combined-navigation">
+        <ul class="list-nav">
+            <li id="inversion">Inversiones</li>
+            <li id="wallet">Cartera</li>
+            <li id="overview">General</li>
+            <li id="info">Ayuda</li>
+        </ul>
+    </nav>
+
+    <div class="saved-number">
+        <h2 id="tusahorros">Ganancias Totales:</h2>
+        <h2 id="numerito">$0</h2>
+    </div>
+
+    <div class="saved-number">
+        <h2 id="tusahorros">Gastos Totales:</h2>
+        <h2 id="totalGastos">$0</h2>
+    </div>
+
+    <div class="settings-bar">
+        <button id="toggleMenu" class="btn-menu">
+            <img src="/Icons/confg.svg" class="list__img" />
+        </button>
+        <ul class="list hidden">
+            <li class="list__item">
+                <div class="list__button">
+                    <img src="/Icons/user.svg" class="list__img" id="" />
+                    <a href="#" class="nav__link" id="perfila">Perfil</a>
+                </div>
+            </li>
+            <li class="list__item">
+                <div class="list__button list__button--click">
+                    <img src="/Icons/account.svg" class="list__img" />
+                    <a href="#" class="nav__link">Cuenta</a>
+                </div>
+            </li>
+            <li class="list__item">
+                <div class="list__button list__button--click">
+                    <img src="/Icons/support.svg" class="list__img" />
+                    <a href="#">Reportes</a>
+                </div>
+            </li>
+            <li class="list__item">
+                <div class="list__button list__button--click">
+                    <img src="/Icons/info.svg" class="list__img" />
+                    <a href="#">Informacion</a>
+                </div>
+            </li>
+            <li class="list__item">
+                <div class="list__button list__button--click">
+                    <img src="/Icons/log-out.svg" class="list__img" id="log-out" />
+                    <a href="#">log-out</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+    <script src="../Functions Js/ui.js"></script>
+</body>
+
+</html>
