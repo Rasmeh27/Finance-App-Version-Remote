@@ -7,6 +7,8 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+CORS(app, resources={r"/send-email": {"origins": "http://localhost:5000"}})
+
 @app.route('/send-email', methods=['POST'])
 def send_email():
     data = request.get_json()

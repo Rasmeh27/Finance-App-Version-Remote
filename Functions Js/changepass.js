@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (response.ok) {
                     alert('Correo electrónico enviado con éxito');
                     form.reset(); // Reiniciar el formulario después del envío
-                    window.location.href = "/otra-pagina.html"; // Redirigir a otra página
+                    window.location.href = "https://mail.google.com/mail/u/0/#inbox"; // Redirigir a otra página
                 } else {
                     throw new Error('Error al enviar el correo electrónico');
                 }
