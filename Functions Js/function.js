@@ -14,8 +14,8 @@ form.addEventListener("submit", e => {
     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     parrafo.innerHTML = "";
 
-    if (username.value.length < 6) {
-        warnings += `El nombre no es válido, minimo 6 letras <br>`;
+    if (username.value.length < 4) {
+        warnings += `El nombre no es válido, minimo 4 letras <br>`;
         entrar = true;
     }
     if (!regexEmail.test(email.value)) {
