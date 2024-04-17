@@ -11,6 +11,21 @@ const invertion = document.getElementById("inversion");
 const cartera = document.getElementById('wallet');
 const menu = document.getElementById('overview');
 
+//Funciones del button nav 
+const Information = document.getElementById('Informacion');
+
+if (Information) {
+	Information.addEventListener("click", function (event) {
+		event.preventDefault()
+		window.location.href = 'https://enlightened-english-809236.framer.app';
+	});
+
+	function redirectToAnotherPage() {
+		window.location.href = 'https://enlightened-english-809236.framer.app'
+
+	}
+}
+
 if (cartera) {
 	cartera.addEventListener("click", function () {
 		window.location.href = "/blocks/wallet.html";
@@ -140,8 +155,5 @@ function calcularImpuestos() {
 			return;
 		}
 	}
-
-
-
 
 }

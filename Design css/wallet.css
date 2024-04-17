@@ -225,3 +225,68 @@ nav li {
   width: 20%;
   margin: 50px auto;
 }
+
+@media only screen and (max-width: 480px) {
+  /* Styles for phones */
+  .saved-number {
+    width: 80%;
+  }
+  #ingresos-input {
+    width: 100%;
+  }
+}
+
+.hide-small {
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .hide-small {
+    display: none;
+  }
+}
+
+.settings-bar {
+  display: none;
+}
+
+.settings-bar.show-menu {
+  display: flex;
+}
+
+.list {
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  right: 0;
+  top: 80px; /* Ajusta según sea necesario */
+  background-color: #0080ba;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.list__item {
+  height: auto;
+}
+
+.btn-menu {
+  display: block;
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 389px) and (max-height: 843px) {
+  header {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 843px) and (orientation: portrait) {
+  header {
+    display: none;
+  }
+}
