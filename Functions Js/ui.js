@@ -92,10 +92,10 @@ function calcularImpuestos() {
 	var gastosTelefonoInput = parseFloat(document.getElementById("input-gastos-telefono").value.trim());
 	var gastosSeguroInput = parseFloat(document.getElementById("input-gastos-seguro").value.trim());
 	var gastosAfpInput = parseFloat(document.getElementById("input-gastos-pension").value.trim());
-	var gastosEnergiaInput = parseFloat(document.getElementById("input-gastos-energia").value.trim())
-	var gastosAguaInput = parseFloat(document.getElementById("input-gastos-agua").value.trim())
+	var gastosEnergiaInput = parseFloat(document.getElementById("input-gastos-energia").value.trim());
+	var gastosAguaInput = parseFloat(document.getElementById("input-gastos-agua").value.trim());
 
-	//calcular gastos
+	// Calcular gastos
 	var gastosInternet = gastosInternetInput ? gastosInternetInput : 0;
 	var gastosVehiculo = gastosVehiculoInput ? gastosVehiculoInput : 0;
 	var gastosTelefono = gastosTelefonoInput ? gastosTelefonoInput : 0;
@@ -116,27 +116,31 @@ function calcularImpuestos() {
 
 	var ingresosDespuesGastos = ingresos - totalGastos;
 
+	if (ingresosDespuesGastos <= 0) {
+		resultElement.innerHTML = "Los gastos exceden los ingresos";
+		return;
+	}
+
+	// Mostrar el resultado después de restar los gastos de los ingresos
+	resultElement.innerHTML = "$" + ingresosDespuesGastos.toFixed(2);
 
 	if (ingresos <= 20000) {
 		warnings.innerHTML = "No se le aplicarán impuestos.";
-		resultElement.innerHTML = "$" + ingresos.toFixed(2);
 		return;
 	} else {
 		var impuestos;
 
 		if (ingresos > 416220) {
 			impuestos = ingresos * 0.27;
-			warnings.innerHTML =
-				"Impuestos sobre la Renta: RD$ - " + impuestos.toFixed(2);
+			warnings.innerHTML = "Impuestos sobre la Renta: RD$ - " + impuestos.toFixed(2);
 		} else {
 			impuestos = ingresos * 0.18;
 			warnings.innerHTML = "RD$ - " + impuestos.toFixed(2);
 		}
 
 		//alerta de ahorro 
-
-		var porcentajeDeAhorro = ((ingresosDespuesGastos) / ingresos * 50);
-		var porcentajDeInversion = ((ingresosDespuesGastos) / ingresos * 20);
+		var porcentajeDeAhorro = (ingresosDespuesGastos / ingresos * 50);
+		var porcentajeDeInversion = (ingresosDespuesGastos / ingresos * 20);
 
 		// Después de calcular el resultado
 		var resultadoDespuesImpuestos = ingresosDespuesGastos - impuestos;
@@ -146,14 +150,13 @@ function calcularImpuestos() {
 		localStorage.setItem('resultadoImpuestos', resultadoDespuesImpuestos.toFixed(2));
 		localStorage.setItem('totalGastos', totalGastos.toFixed(2));
 
-		if ((porcentajeDeAhorro)) {
+		if (porcentajeDeAhorro) {
 			swal.fire({
 				title: "AHORRA O INVIERTE",
-				text: "Deberias ahorrar: " + porcentajeDeAhorro.toFixed(2) + "% " + "O podrias invertir este porcentaje " + porcentajDeInversion.toFixed(2) + "%",
+				text: "Deberías ahorrar: " + porcentajeDeAhorro.toFixed(2) + "% " + "O podrías invertir este porcentaje " + porcentajeDeInversion.toFixed(2) + "%",
 				icon: "info",
 			});
 			return;
 		}
 	}
-
 }
